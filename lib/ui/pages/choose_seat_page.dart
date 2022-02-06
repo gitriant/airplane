@@ -1,4 +1,5 @@
 import 'package:airplane/shared/theme.dart';
+import 'package:airplane/ui/widgets/custom_button.dart';
 import 'package:airplane/ui/widgets/seat_item.dart';
 import 'package:flutter/material.dart';
 
@@ -251,8 +252,52 @@ class ChooseSeatPage extends StatelessWidget {
                 ],
               ),
             ),
+            // Your seat
+            Container(
+              margin: EdgeInsets.only(top: 30),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text(
+                    'Your seat',
+                    style: greyTextStyle.copyWith(fontWeight: light),
+                  ),
+                  Text(
+                    'A3, B3',
+                    style: blackTextStyle.copyWith(
+                        fontWeight: medium, fontSize: 16),
+                  )
+                ],
+              ),
+            ),
+            // Total
+            Container(
+              margin: EdgeInsets.only(top: 16),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text(
+                    'Total',
+                    style: greyTextStyle.copyWith(fontWeight: light),
+                  ),
+                  Text(
+                    'IDR 543.000.000',
+                    style: purpleTextStyle.copyWith(
+                        fontWeight: semiBold, fontSize: 16),
+                  )
+                ],
+              ),
+            )
           ],
         ),
+      );
+    }
+
+    Widget checkoutButton() {
+      return CustomButton(
+        title: 'Continue to Checkout',
+        onPressed: () {},
+        margin: EdgeInsets.only(top: 30, bottom: 46),
       );
     }
 
@@ -260,7 +305,7 @@ class ChooseSeatPage extends StatelessWidget {
       backgroundColor: kBackgroundColor,
       body: ListView(
         padding: EdgeInsets.symmetric(horizontal: 24),
-        children: [title(), seatStatus(), selectSeat()],
+        children: [title(), seatStatus(), selectSeat(), checkoutButton()],
       ),
     );
   }
