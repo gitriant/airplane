@@ -13,6 +13,8 @@ Color kRedColor = Color(0xffeb70a5);
 Color kBackgroundColor = Color(0xfffafafa);
 Color kInactiveColor = Color(0xffdbd7ec);
 Color kTransparentColor = Colors.transparent;
+Color kAvailableColor = Color(0xffe0d9ff);
+Color kUnavailableColor = Color(0xffebecf1);
 
 TextStyle blackTextStyle = GoogleFonts.poppins(color: kBlackColor);
 TextStyle whiteTextStyle = GoogleFonts.poppins(color: kWhiteColor);
