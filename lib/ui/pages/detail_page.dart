@@ -88,6 +88,33 @@ class DetailPage extends StatelessWidget {
                   )
                 ],
               ),
+            ),
+            //Description
+            Container(
+              width: double.infinity,
+              margin: EdgeInsets.only(top: 30),
+              padding: EdgeInsets.symmetric(horizontal: 20, vertical: 30),
+              decoration: BoxDecoration(
+                  color: kWhiteColor,
+                  borderRadius: BorderRadius.circular(defaultRadius)),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  //About
+                  Text(
+                    'About',
+                    style: blackTextStyle.copyWith(
+                        fontSize: 16, fontWeight: semiBold),
+                  ),
+                  SizedBox(
+                    height: 6,
+                  ),
+                  Text(
+                    'Ci Liwung, atau biasa ditulis Ciliwung adalah salah satu sungai terpenting di Tatar Pasundan, Pulau Jawa - Indonesia',
+                    style: blackTextStyle.copyWith(height: 2.6),
+                  ),
+                ],
+              ),
             )
           ],
         ),
