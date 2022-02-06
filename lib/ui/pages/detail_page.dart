@@ -1,4 +1,5 @@
 import 'package:airplane/shared/theme.dart';
+import 'package:airplane/ui/widgets/custom_button.dart';
 import 'package:airplane/ui/widgets/interest_item.dart';
 import 'package:airplane/ui/widgets/photo_item.dart';
 import 'package:flutter/material.dart';
@@ -173,6 +174,35 @@ class DetailPage extends StatelessWidget {
                           imageUrl: 'assets/icon_check.png')
                     ],
                   )
+                ],
+              ),
+            ),
+            // Price & Book Button
+            Container(
+              margin: EdgeInsets.symmetric(vertical: 30),
+              width: double.infinity,
+              child: Row(
+                children: [
+                  Expanded(
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          'IDR 2.500.000',
+                          style: blackTextStyle.copyWith(
+                              fontSize: 18, fontWeight: medium),
+                        ),
+                        SizedBox(
+                          height: 5,
+                        ),
+                        Text(
+                          'per orang',
+                          style: greyTextStyle.copyWith(fontWeight: light),
+                        ),
+                      ],
+                    ),
+                  ),
+                  CustomButton(title: 'Book Now', width: 170, onPressed: () {})
                 ],
               ),
             )
