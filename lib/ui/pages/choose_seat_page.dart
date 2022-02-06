@@ -62,11 +62,68 @@ class ChooseSeatPage extends StatelessWidget {
       );
     }
 
+    Widget selectSeat() {
+      return Container(
+        width: double.infinity,
+        margin: EdgeInsets.only(top: 30),
+        padding: EdgeInsets.symmetric(
+          horizontal: 22,
+          vertical: 30,
+        ),
+        decoration: BoxDecoration(
+            color: kWhiteColor,
+            borderRadius: BorderRadius.circular(defaultRadius)),
+        child: Column(
+          children: [
+            Row(
+              children: [
+                Expanded(
+                    child: Center(
+                  child: Text(
+                    'A',
+                    style: greyTextStyle.copyWith(fontSize: 16),
+                  ),
+                )),
+                Expanded(
+                    child: Center(
+                  child: Text(
+                    'B',
+                    style: greyTextStyle.copyWith(fontSize: 16),
+                  ),
+                )),
+                Expanded(
+                    child: Center(
+                  child: Text(
+                    '',
+                    style: greyTextStyle.copyWith(fontSize: 16),
+                  ),
+                )),
+                Expanded(
+                    child: Center(
+                  child: Text(
+                    'C',
+                    style: greyTextStyle.copyWith(fontSize: 16),
+                  ),
+                )),
+                Expanded(
+                    child: Center(
+                  child: Text(
+                    'D',
+                    style: greyTextStyle.copyWith(fontSize: 16),
+                  ),
+                )),
+              ],
+            )
+          ],
+        ),
+      );
+    }
+
     return Scaffold(
       backgroundColor: kBackgroundColor,
       body: ListView(
         padding: EdgeInsets.symmetric(horizontal: 24),
-        children: [title(), seatStatus()],
+        children: [title(), seatStatus(), selectSeat()],
       ),
     );
   }
