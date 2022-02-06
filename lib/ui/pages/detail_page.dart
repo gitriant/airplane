@@ -146,6 +146,9 @@ class DetailPage extends StatelessWidget {
                     style: blackTextStyle.copyWith(
                         fontSize: 16, fontWeight: semiBold),
                   ),
+                  SizedBox(
+                    height: 6,
+                  ),
                   Row(
                     children: [
                       InterestItem(
