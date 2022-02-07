@@ -1,4 +1,5 @@
 import 'package:airplane/shared/theme.dart';
+import 'package:airplane/ui/widgets/booking_details_item.dart';
 import 'package:flutter/material.dart';
 
 class CheckoutPage extends StatelessWidget {
@@ -65,7 +66,9 @@ class CheckoutPage extends StatelessWidget {
             borderRadius: BorderRadius.circular(defaultRadius),
             color: kWhiteColor),
         child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
+            // destination tile
             Row(
               children: [
                 Container(
@@ -113,6 +116,37 @@ class CheckoutPage extends StatelessWidget {
                 )
               ],
             ),
+
+            //  booking details text
+            Container(
+              margin: EdgeInsets.only(top: 20),
+              child: Text(
+                'Booking details',
+                style:
+                    blackTextStyle.copyWith(fontSize: 16, fontWeight: semiBold),
+              ),
+            ),
+            // booking details items
+            BookingDetailsItem(
+                title: 'Traveler',
+                valueText: '2 person',
+                valueColor: kBlackColor),
+            BookingDetailsItem(
+                title: 'Seat', valueText: 'A3, B3', valueColor: kBlackColor),
+            BookingDetailsItem(
+                title: 'Insurance', valueText: 'YES', valueColor: kGreenColor),
+            BookingDetailsItem(
+                title: 'Refundable', valueText: 'NO', valueColor: kRedColor),
+            BookingDetailsItem(
+                title: 'VAT', valueText: '45%', valueColor: kBlackColor),
+            BookingDetailsItem(
+                title: 'Price',
+                valueText: 'IDR 8.500.690',
+                valueColor: kBlackColor),
+            BookingDetailsItem(
+                title: 'Grand Total',
+                valueText: 'IDR 14.000.000',
+                valueColor: kPrimaryColor),
           ],
         ),
       );
