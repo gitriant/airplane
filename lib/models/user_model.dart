@@ -1,7 +1,7 @@
 import 'package:equatable/equatable.dart';
 
 class UserModel extends Equatable {
-  @override
+  // @override
   final String id;
   final String email;
   final String name;
