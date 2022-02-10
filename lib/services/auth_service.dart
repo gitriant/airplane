@@ -3,7 +3,7 @@ import 'package:airplane/services/user_service.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/cupertino.dart';
 
-class AuthServices {
+class AuthService {
   FirebaseAuth _auth = FirebaseAuth.instance;
 
   Future<UserModel> signUp(

@@ -4,7 +4,12 @@ import 'package:airplane/ui/widgets/custom_text_form_field.dart';
 import 'package:flutter/material.dart';
 
 class SignUpPage extends StatelessWidget {
-  const SignUpPage({Key? key}) : super(key: key);
+  SignUpPage({Key? key}) : super(key: key);
+
+  TextEditingController nameController = TextEditingController(text: '');
+  TextEditingController emailController = TextEditingController(text: '');
+  TextEditingController passwordController = TextEditingController(text: '');
+  TextEditingController hobbyController = TextEditingController(text: '');
 
   @override
   Widget build(BuildContext context) {
@@ -21,24 +26,32 @@ class SignUpPage extends StatelessWidget {
     Widget inputSection() {
       Widget nameInput() {
         return CustomTextFormField(
-            title: 'Full name', hintText: 'Your full name');
+          title: 'Full name',
+          hintText: 'Your full name',
+          controller: nameController,
+        );
       }
 
       Widget emailInput() {
         return CustomTextFormField(
-            title: 'Email Address', hintText: 'Your email address');
+            title: 'Email Address',
+            hintText: 'Your email address',
+            controller: emailController);
       }
 
       Widget passwordInput() {
         return CustomTextFormField(
-          title: 'Password',
-          hintText: 'Your password',
-          obsecureText: true,
-        );
+            title: 'Password',
+            hintText: 'Your password',
+            obsecureText: true,
+            controller: passwordController);
       }
 
       Widget hobbyInput() {
-        return CustomTextFormField(title: 'Hobby', hintText: 'Your hobby');
+        return CustomTextFormField(
+            title: 'Hobby',
+            hintText: 'Your hobby',
+            controller: hobbyController);
       }
 
       Widget submitButton() {
