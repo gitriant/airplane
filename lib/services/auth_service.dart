@@ -1,7 +1,7 @@
 import 'package:airplane/models/user_model.dart';
 import 'package:airplane/services/user_service.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:flutter/cupertino.dart';
+// import 'package:flutter/cupertino.dart';
 
 class AuthService {
   FirebaseAuth _auth = FirebaseAuth.instance;
