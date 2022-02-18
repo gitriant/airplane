@@ -41,7 +41,7 @@ class GetStartedPage extends StatelessWidget {
                   width: 220,
                   margin: EdgeInsets.only(top: 50, bottom: 50),
                   onPressed: () {
-                    Navigator.pushNamed(context, '/sign-up');
+                    Navigator.pushNamed(context, '/sign-in');
                   },
                 )
               ],
