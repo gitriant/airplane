@@ -1,4 +1,5 @@
 import 'package:airplane/models/transaction_model.dart';
+import 'package:airplane/services/transaction_service.dart';
 import 'package:bloc/bloc.dart';
 import 'package:equatable/equatable.dart';
 
@@ -10,7 +11,7 @@ class TransactionCubit extends Cubit<TransactionState> {
   void createTransaction(TransactionModel transaction) async {
     try {
       emit(TransactionLoading());
-      TransactionCubit().createTransaction(transaction);
+      await TransactionService().createTransaction(transaction);
       emit(TransactionSuccess());
     } catch (e) {
       emit(TransactionFailed(e.toString()));
