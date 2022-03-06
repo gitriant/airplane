@@ -13,10 +13,10 @@ class TransactionLoading extends TransactionState {}
 
 class TransactionSuccess extends TransactionState {
   final List<TransactionModel> transactions;
+
   TransactionSuccess(this.transactions);
 
   @override
-  // TODO: implement props
   List<Object> get props => [transactions];
 }
 

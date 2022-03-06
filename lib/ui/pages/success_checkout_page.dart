@@ -10,9 +10,9 @@ class SuccessCheckoutPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: kBackgroundColor,
-        body: Center(
-            child: Column(
+      backgroundColor: kBackgroundColor,
+      body: Center(
+        child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Container(
@@ -20,20 +20,29 @@ class SuccessCheckoutPage extends StatelessWidget {
               height: 150,
               margin: EdgeInsets.only(bottom: 80),
               decoration: BoxDecoration(
-                  image: DecorationImage(
-                      image: AssetImage('assets/image_success.png'))),
+                image: DecorationImage(
+                  image: AssetImage(
+                    'assets/image_success.png',
+                  ),
+                ),
+              ),
             ),
             Text(
-              'Well Booked',
-              style:
-                  blackTextStyle.copyWith(fontSize: 32, fontWeight: semiBold),
+              'Well Booked 😍',
+              style: blackTextStyle.copyWith(
+                fontSize: 32,
+                fontWeight: semiBold,
+              ),
             ),
             SizedBox(
               height: 10,
             ),
             Text(
               'Are you ready to explore the new\nworld of experiences?',
-              style: greyTextStyle.copyWith(fontSize: 16, fontWeight: light),
+              style: greyTextStyle.copyWith(
+                fontSize: 16,
+                fontWeight: light,
+              ),
               textAlign: TextAlign.center,
             ),
             CustomButton(
@@ -45,8 +54,10 @@ class SuccessCheckoutPage extends StatelessWidget {
               },
               width: 220,
               margin: EdgeInsets.only(top: 50),
-            )
+            ),
           ],
-        )));
+        ),
+      ),
+    );
   }
 }
